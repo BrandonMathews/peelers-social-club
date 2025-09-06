@@ -1,10 +1,10 @@
-# Peelers Social Club
+# Peeler Social Club
 
-A community-focused website promoting neighbourhood connections and local safety through the Peelers Social Club initiative.
+A community-focused website promoting neighbourhood connections and local safety through the Peeler Social Club initiative.
 
 ## About
 
-The Peelers Social Club builds on Sir Robert Peel's community policing principles, creating stronger, safer neighbourhoods through genuine connections between residents. The platform connects people with their local community through the Peeler AI assistant and facilitates real-world social activities.
+The Peeler Social Club builds on Sir Robert Peel's community policing principles, creating stronger, safer neighbourhoods through genuine connections between residents. The platform connects people with their local community through the Peeler AI assistant and facilitates real-world social activities.
 
 ## Features
 
@@ -52,4 +52,4 @@ When making updates:
 
 ## Contact
 
-For questions about the Peelers Social Club initiative, download the Peelers app available on Google Play and Apple App Store.
+For questions about the Peeler Social Club initiative, download the Peeler app available on Google Play and Apple App Store.
