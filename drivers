@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boby Security Drivers - Elite Recruitment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Ubuntu', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect fill="%23000" width="1920" height="1080"/><circle cx="960" cy="540" r="300" fill="%23111" opacity="0.5"/></svg>');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255,215,0,0.1) 0%, transparent 70%);
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            padding: 40px 20px;
+            z-index: 2;
+        }
+        
+        .logo {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #FFD952, #FF2994A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+        
+        .hero-headline {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        
+        .hero-subheadline {
+            font-size: 1.8rem;
+            color: #FF6865;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .hero-description {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: #AFAFAFA;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #FF6865, #FF6865);
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            border: 3px solid #fff;
+            animation: pulse 2s infinite;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 104, 101, 0.4);
+        }
+        
+        /* Problem Section */
+        .problem-section {
+            background: linear-gradient(135deg, #303030 0%, #2F2F4F 100%);
+            padding: 80px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #FF6865;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .problem-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #FF6865;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .problem-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .problem-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        /* Solution Section */
+        .solution-section {
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+            padding: 80px 20px;
+        }
+        
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .solution-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 35px;
+            border-radius: 20px;
+            border: 2px solid #FFD952;
+            backdrop-filter: blur(15px);
+            transition: all 0.3s ease;
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 217, 82, 0.2);
+        }
+        
+        .solution-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FFD952;
+            margin-bottom: 15px;
+        }
+        
+        .solution-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #ecf0f1;
+        }
+        
+        /* Elite Opportunity Section */
+        .elite-section {
+            background: linear-gradient(45deg, #8b0000, #a0522d, #8b0000);
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .elite-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23ffd700" stroke-width="0.5" opacity="0.3"/></svg>');
+            animation: rotate 20s linear infinite;
+        }
+        
+        .elite-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .elite-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+        }
+        
+        .elite-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            color: #FFD952;
+            font-style: italic;
+        }
+        
+        .offer-box {
+            background: rgba(0, 0, 0, 0.8);
+            border: 3px solid #FFD952;
+            border-radius: 20px;
+            padding: 50px;
+            margin: 40px 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        .offer-text {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        
+        .scarcity-text {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #FF6865;
+            margin: 30px 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        /* Form Section */
+        .form-section {
+            background: linear-gradient(135deg, #7B787B 0%, #78B87B 100%);
+            padding: 80px 20px;
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 20px;
+            border: 2px solid #FFD952;
+            backdrop-filter: blur(15px);
+            text-align: center;
+        }
+        
+        .form-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #FFD952;
+        }
+        
+        .form-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #AFAFAFA;
+        }
+        
+        .elite-invitation-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #FF6865, #c0392b);
+            color: white;
+            padding: 25px 60px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .elite-invitation-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 104, 101, 0.4);
+        }
+        
+        .disclaimer {
+            font-size: 0.9rem;
+            color: #AFAFAFA;
+            text-align: center;
+            margin-top: 30px;
+            line-height: 1.5;
+        }
+        
+        /* Security Companies Section */
+        .companies-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .companies-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .companies-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #FFD952;
+            margin-bottom: 30px;
+        }
+        
+        .companies-content {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid #FFD952;
+            backdrop-filter: blur(15px);
+        }
+        
+        .companies-text {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            color: #FFFFFF;
+            line-height: 1.7;
+        }
+        
+        .companies-subtext {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+        
+        .state-leadership-box {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #FF6865;
+            margin-top: 30px;
+        }
+        
+        .state-leadership-title {
+            color: #FF6865;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .state-leadership-text {
+            color: #FFFFFF;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .state-leadership-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #FF6865, #c0392b);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .state-leadership-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 104, 101, 0.4);
+        }
+        
+        /* Animations */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 20px rgba(255, 104, 101, 0.5); }
+            to { text-shadow: 0 0 40px rgba(255, 104, 101, 0.8); }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-headline { font-size: 2.5rem; }
+            .hero-subheadline { font-size: 1.3rem; }
+            .hero-description { font-size: 1.1rem; }
+            .logo { font-size: 3rem; }
+            .section-title { font-size: 2.2rem; }
+            .elite-title { font-size: 2.5rem; }
+            .scarcity-text { font-size: 1.5rem; }
+            .form-container { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="logo">🇦🇺 BOBY</div>
+            <h1 class="hero-headline">Stop Building Someone Else's Empire</h1>
+            <p class="hero-subheadline">Build Your Own</p>
+            <p class="hero-description">
+                The first worker-owned rideshare platform where Security Drivers become business owners, 
+                not disposable resources. Drive on ALL platforms while building generational wealth.
+            </p>
+            <a href="#elite-opportunity" class="cta-button">🎖️ Request Elite Invitation</a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">The Brutal Truth About Current Rideshare</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <p class="problem-text">Your car depreciates with every mile while Uber's algorithm treats you like a disposable resource</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">💸</div>
+                    <p class="problem-text">You have ZERO equity or ownership - one platform suspension destroys your income</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🏃‍♂️</div>
+                    <p class="problem-text">The "Hamster Wheel of Doom" - maximum effort, minimal long-term gain</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🇦🇺</div>
+                    <p class="problem-text">27% of rideshare revenue leaves Australia - straight to foreign corporate pockets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <h2 class="section-title" style="color: #FFD952;">The Boby Security Drivers Revolution</h2>
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <h3 class="solution-title">🚗 Drive ALL Platforms - Zero Penalties</h3>
+                    <p class="solution-text">Uber, DiDi, and any future platforms - work them all simultaneously. No platform can control or restrict your income. Diversified revenue streams = financial security.</p>
+                </div>
+                <div class="solution-card">
+                    <h3 class="solution-title">🛡️ Security Professional, Not Just Driver</h3>
+                    <p class="solution-text">Close protection training, premium security transport rates, immediate assistance callouts, cash-in-transit opportunities, personal protection services.</p>
+                </div>
+                <div class="solution-card">
+                    <h3 class="solution-title">💰 Build Revenue-Generating Network</h3>
+                    <p class="solution-text">Special Agent → Team Leader → Squad Leader → Chief Officer → Manager → Director. YOU OWN the network and earn from every recruit.</p>
+                </div>
+                <div class="solution-card">
+                    <h3 class="solution-title">🤖 AI-Enhanced Capabilities</h3>
+                    <p class="solution-text">Technology that makes you more valuable, not replaceable. Advanced reporting systems, intelligent dispatch, postcode territory control.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elite Opportunity Section -->
+    <section class="elite-section" id="elite-opportunity">
+        <div class="elite-content">
+            <h2 class="elite-title">An Offer You Can't Refuse</h2>
+            <p class="elite-subtitle">"I'm gonna make him an offer he can't refuse."</p>
+            
+            <div class="offer-box">
+                <p class="offer-text">
+                    Out of 155,000+ Australian security professionals, only <strong>10,000 will be selected</strong> as Founding Members. 
+                    This is an invitation-only privilege where someone in our ranks believes you're worthy.
+                </p>
+                <p class="offer-text">
+                    They're vouching for your character. They're committing to your success because your success is their success. 
+                    This isn't just a business opportunity - it's an elite alliance of security professionals building something legendary.
+                </p>
+                <div class="scarcity-text">⚡ 10,000 OUT OF 155,000+ ⚡</div>
+                <p class="offer-text">
+                    <strong>After the 10,000th member:</strong> Founding Round closes forever. Lifetime memberships end. 
+                    Pioneer Round begins (elite government forces only). Then global launch - and premium entry becomes impossible.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="form-container">
+            <h2 class="form-title">🎖️ Request Your Elite Invitation</h2>
+            <p class="form-subtitle">Are you worthy of joining Australia's most exclusive security network?</p>
+            
+            <a href="https://us17.list-manage.com/contact-form?u=5a06b5c7cc990e9142ecbc5f8&form_id=8182ec7bfdaee4f5e7b2fed423761444" target="_blank" class="elite-invitation-button">
+                🇦🇺 REQUEST MY ELITE INVITATION
+            </a>
+            
+            <p class="disclaimer">
+                <strong>Invitation Only:</strong> Submitting this form does not guarantee acceptance. 
+                Only the most qualified security professionals will receive invitations to join our exclusive Founding Round.
+                <br><br>
+                <strong>Your Privacy:</strong> Your information will only be used to assess your eligibility and contact you regarding your application.
+            </p>
+        </div>
+    </section>
+
+    <!-- Security Companies Section -->
+    <section class="companies-section">
+        <div class="companies-container">
+            <h2 class="companies-title">🏢 Security Companies: State Leadership Opportunity</h2>
+            <div class="companies-content">
+                <p class="companies-text">
+                    <strong>8 out of 7,000 companies nationwide</strong> will be selected as State/Territory Leaders 
+                    to head the postcode residential property immediate assistance alarm response infrastructure.
+                </p>
+                <p class="companies-subtext">
+                    Missed the cut? Stay relevant with <strong>share options</strong> in our Security Intelligence Service (SIS) - 
+                    the collective intelligence network derived from all residential property participants.
+                </p>
+                <div class="state-leadership-box">
+                    <h3 class="state-leadership-title">Security Company Leaders: Secure Your State</h3>
+                    <p class="state-leadership-text">
+                        Contact us directly to discuss State Leadership opportunities for your security company.
+                        Limited positions available - first qualified applicants will be prioritized.
+                    </p>
+                    <a href="https://us17.list-manage.com/contact-form?u=5a06b5c7cc990e9142ecbc5f8&form_id=8182ec7bfdaee4f5e7b2fed423761444" target="_blank" class="state-leadership-button">
+                        🎯 REQUEST STATE LEADERSHIP INFO
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Wait for DOM to load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for CTA button
+            document.querySelector('.cta-button').addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector('#elite-opportunity').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+
+            // Add floating animation to cards
+            const cards = document.querySelectorAll('.problem-card, .solution-card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>
