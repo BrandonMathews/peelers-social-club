@@ -7,10 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏡</text></svg>">
-    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏡</text></svg>">
-    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏡</text></svg>">
-    <link rel="icon" type="image/png" sizes="16x16" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏡</text></svg>">
+    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     
     <style>
         * {
@@ -841,10 +841,7 @@
     <header>
         <div class="header-content">
             <a href="#" class="logo">
-                <!-- Logo placeholder - replace with actual logo -->
-                <div class="image-placeholder" style="height: 40px; width: 40px; border-radius: 5px;">
-                    <span>LOGO</span>
-                </div>
+                <img src="images/logo/logo.png" alt="Peeler Social Clubs Logo" class="logo-img">
                 PEELER SOCIAL CLUBS
             </a>
             <nav>
@@ -875,40 +872,28 @@
     <section class="section section-white" id="benefits">
         <h2>Safer, Joyful Living Through Connection</h2>
         
-        <!-- Full-width image placeholder -->
+        <!-- Full-width image -->
         <div class="image-container">
-            <div class="image-placeholder" style="height: 400px;">
-                <span>Community Gathering Image</span>
-                <div class="placeholder-text">Recommended: 1200x400px (Desktop) / 800x300px (Mobile)</div>
-            </div>
+            <picture>
+                <source media="(max-width: 768px)" srcset="images/hero/community-gathering-mobile.jpg">
+                <img src="images/hero/community-gathering.jpg" alt="Community members enjoying a neighborhood event">
+            </picture>
             <div class="image-caption">Community members enjoying a neighborhood event</div>
         </div>
         
         <div class="benefits-grid">
             <div class="benefit-card fade-in">
-                <!-- Benefit image placeholder -->
-                <div class="image-placeholder benefit-image">
-                    <span>Safe Neighborhood</span>
-                    <div class="placeholder-text">Recommended: 400x250px</div>
-                </div>
+                <img src="images/benefits/safe-neighborhood.jpg" alt="Safe neighborhood with connected community" class="benefit-image">
                 <h3>Safer Neighbourhoods</h3>
                 <p>When neighbours know each other, they naturally look out for one another. Crime drops when communities are connected and people care about their shared home.</p>
             </div>
             <div class="benefit-card fade-in">
-                <!-- Benefit image placeholder -->
-                <div class="image-placeholder benefit-image">
-                    <span>Joyful Living</span>
-                    <div class="placeholder-text">Recommended: 400x250px</div>
-                </div>
+                <img src="images/benefits/joyful-living.jpg" alt="People enjoying joyful community living" class="benefit-image">
                 <h3>Joyful Daily Living</h3>
                 <p>Transform your daily routine with friendly waves, helpful neighbours, and genuine community connections. Life becomes richer when you're part of something bigger.</p>
             </div>
             <div class="benefit-card fade-in">
-                <!-- Benefit image placeholder -->
-                <div class="image-placeholder benefit-image">
-                    <span>Property Value</span>
-                    <div class="placeholder-text">Recommended: 400x250px</div>
-                </div>
+                <img src="images/benefits/property-value.jpg" alt="Property values growing in connected communities" class="benefit-image">
                 <h3>Property Value Growth</h3>
                 <p>Close-knit communities demonstrably increase property values. Well-connected postcodes become sought-after places to live and invest.</p>
             </div>
@@ -921,31 +906,19 @@
         <div class="steps-container">
             <div class="step fade-in">
                 <div class="step-number">1</div>
-                <!-- Step image placeholder -->
-                <div class="image-placeholder step-image">
-                    <span>Download App</span>
-                    <div class="placeholder-text">Recommended: 350x200px</div>
-                </div>
+                <img src="images/steps/download-app.jpg" alt="Download the Peeler App" class="step-image">
                 <h3>Download the Peeler App</h3>
                 <p>Get the app from Google Play or App Store and connect with Boby, your virtual AI security officer for your postcode.</p>
             </div>
             <div class="step fade-in">
                 <div class="step-number">2</div>
-                <!-- Step image placeholder -->
-                <div class="image-placeholder step-image">
-                    <span>Chat with Boby</span>
-                    <div class="placeholder-text">Recommended: 350x200px</div>
-                </div>
+                <img src="images/steps/chat-boby.jpg" alt="Chat with Boby AI assistant" class="step-image">
                 <h3>Chat with Boby</h3>
                 <p>Tell Boby you'd like to become a community organiser. She'll connect you with existing groups or help you start fresh.</p>
             </div>
             <div class="step fade-in">
                 <div class="step-number">3</div>
-                <!-- Step image placeholder -->
-                <div class="image-placeholder step-image">
-                    <span>Build Team</span>
-                    <div class="placeholder-text">Recommended: 350x200px</div>
-                </div>
+                <img src="images/steps/build-team.jpg" alt="Build your community team" class="step-image">
                 <h3>Build Your Core Team</h3>
                 <p>Recruit volunteers for key roles: Event Coordinator, Communications Manager, Business Liaison, and Activity Champions.</p>
             </div>
@@ -957,29 +930,17 @@
         <h2>Community Activities That Bring People Together</h2>
         <div class="activities-grid">
             <div class="activity-item fade-in">
-                <!-- Activity image placeholder -->
-                <div class="image-placeholder activity-image">
-                    <span>Morning Tea</span>
-                    <div class="placeholder-text">Recommended: 350x200px</div>
-                </div>
+                <img src="images/activities/morning-tea.jpg" alt="Community morning tea gathering" class="activity-image">
                 <h4>Morning Teas & Coffee Circles</h4>
                 <p>Rotating host gatherings where neighbours share stories, coordinate activities, and naturally stay connected.</p>
             </div>
             <div class="activity-item fade-in">
-                <!-- Activity image placeholder -->
-                <div class="image-placeholder activity-image">
-                    <span>Walking Groups</span>
-                    <div class="placeholder-text">Recommended: 350x200px</div>
-                </div>
+                <img src="images/activities/walking-groups.jpg" alt="Community walking groups and hobby clubs" class="activity-image">
                 <h4>Walking Groups & Hobby Clubs</h4>
                 <p>Regular activities like fitness walks, book clubs, gardening groups that create natural interaction opportunities.</p>
             </div>
             <div class="activity-item fade-in">
-                <!-- Activity image placeholder -->
-                <div class="image-placeholder activity-image">
-                    <span>Seasonal Events</span>
-                    <div class="placeholder-text">Recommended: 350x200px</div>
-                </div>
+                <img src="images/activities/seasonal-events.jpg" alt="Seasonal community celebrations and events" class="activity-image">
                 <h4>Seasonal Celebrations</h4>
                 <p>Neighbourhood potlucks, holiday parties, and cultural events that celebrate local community diversity.</p>
             </div>
@@ -1003,7 +964,7 @@
                     <img src="1600x475-playstore.png" alt="Get it on Google Play">
                 </a>
                 <a href="https://apps.apple.com" class="app-store-btn">
-                    <img src="1600x475-appstore.png" alt="Get it on the App Store">
+                    <img src="1600x475-appstore.png" alt="Download on the App Store">
                 </a>
             </div>
             
